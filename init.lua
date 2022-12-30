@@ -101,6 +101,8 @@ require('packer').startup(function(use)
   }
 
   use { "mbbill/undotree" }
+  -- Shows the context of the currently visible buffer contents.
+  use { "wellle/context.vim" }
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
