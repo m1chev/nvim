@@ -1,8 +1,8 @@
 vim.o.relativenumber = true
 vim.o.spell = true
 
-vim.keymap.set('n', '<S-h>', vim.cmd.bNext)
-vim.keymap.set('n', '<S-l>', vim.cmd.bprevious)
+vim.keymap.set('n', 'H', vim.cmd.bnext)
+vim.keymap.set('n', 'L', vim.cmd.bprevious)
 vim.keymap.set('n', '<leader>c', vim.cmd.bdelete)
 
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv'")
