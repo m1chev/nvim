@@ -105,6 +105,16 @@ require('packer').startup(function(use)
   -- Shows the context of the currently visible buffer contents.
   use { "wellle/context.vim" }
 
+  use {
+    "startup-nvim/startup.nvim",
+    requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+    config = function()
+      -- require"startup".setup()
+    end
+  }
+  -- require("startup").setup({theme = "startify"})
+  require("startup").setup({theme = "custom"})
+
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
   if has_plugins then
