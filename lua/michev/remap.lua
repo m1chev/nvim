@@ -53,5 +53,8 @@ vim.keymap.set('n', '<C-j>', '<C-W>j')
 vim.keymap.set('n', '<C-l>', '<C-W>l')
 vim.keymap.set('n', '<C-h>', '<C-W>h')
 
+-- fzf in to new [W]orkspace ([W]ondow)
+vim.keymap.set("n", "<C-w>", "<cmd>silent !tmux neww tmux-sessionizer.sh<CR>")
+
 -- <space>ca - [C]ode [A]ction
 -- vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
