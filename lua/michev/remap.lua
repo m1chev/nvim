@@ -1,14 +1,16 @@
+-- There are more mappings at - after/plugin/extra.lua
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+-- To move files with Netrw
+vim.g.netrw_keepdir = 0
+
+vim.o.wrap = false
+
 vim.o.relativenumber = true
 vim.o.spell = true
-
-vim.keymap.set('n', 'H', vim.cmd.bnext)
-vim.keymap.set('n', 'L', vim.cmd.bprevious)
-vim.keymap.set('n', '<leader>c', vim.cmd.bdelete)
 
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv'")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv'")
@@ -29,13 +31,6 @@ vim.keymap.set('n', '<leader>d', "\"_d")
 vim.keymap.set('v', '<leader>d', "\"_d")
 
 vim.keymap.set('n', 'Q', '<nope>')
-
-vim.o.tabstop = 4
-vim.o.softtabstop = 4
-vim.o.shiftwidth = 4
-vim.o.expandtab = true
-
-vim.o.wrap = false
 
 vim.o.swapfile = false
 vim.o.backup =  false
@@ -59,7 +54,8 @@ vim.keymap.set('n', '<C-l>', '<C-W>l')
 vim.keymap.set('n', '<C-h>', '<C-W>h')
 
 -- fzf in to new [W]orkspace ([W]ondow)
-vim.keymap.set("n", "<C-w>", "<cmd>silent !tmux neww tmux-sessionizer.sh<CR>")
+-- please delete this line
+vim.keymap.set("n", "<C-g>", "<cmd>silent !tmux neww tmux-sessionizer.sh<CR>")
 
 -- <space>ca - [C]ode [A]ction
 -- vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
