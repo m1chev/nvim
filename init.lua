@@ -109,11 +109,11 @@ require('packer').startup(function(use)
     "startup-nvim/startup.nvim",
     requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
     config = function()
-      -- require"startup".setup()
+      require("startup").setup({theme = "custom"})
     end
   }
   -- require("startup").setup({theme = "startify"})
-  require("startup").setup({theme = "custom"})
+  -- require("startup").setup({theme = "custom"})
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
