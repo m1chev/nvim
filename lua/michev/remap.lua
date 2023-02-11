@@ -22,7 +22,7 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
-vim.keymap.set('x', '<leader>p', '"_dP')
+vim.keymap.set('x', '<leader>p', '"0p')
 vim.keymap.set('v', '<leader>y', '"+y')
 vim.keymap.set('n', '<leader>y', '"+y')
 vim.keymap.set('n', '<leader>Y', '"+Y')
@@ -55,7 +55,8 @@ vim.keymap.set('n', '<C-h>', '<C-W>h')
 
 -- fzf in to new [W]orkspace ([W]ondow)
 -- please delete this line
-vim.keymap.set("n", "<C-g>", "<cmd>silent !tmux neww tmux-sessionizer.sh<CR>")
+vim.keymap.set("n", "<C-w>", "<cmd>silent !tmux neww tmux-sessionizer.sh<CR>")
 
+-- comment line gcc
 -- <space>ca - [C]ode [A]ction
 -- vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
