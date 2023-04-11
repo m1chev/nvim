@@ -77,7 +77,11 @@ require('packer').startup(function(use)
         undercurl = true,
         underline = true,
         bold = true,
-        italic = true,
+        italic = {
+          strings = true,
+          operators = true,
+          comments = true
+        },
         strikethrough = true,
         invert_selection = false,
         invert_signs = false,
@@ -104,16 +108,6 @@ require('packer').startup(function(use)
   use { "mbbill/undotree" }
   -- Shows the context of the currently visible buffer contents.
   use { "wellle/context.vim" }
-
-  use {
-    "startup-nvim/startup.nvim",
-    requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-    config = function()
-      require("startup").setup({theme = "custom"})
-    end
-  }
-  -- require("startup").setup({theme = "startify"})
-  -- require("startup").setup({theme = "custom"})
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
@@ -408,7 +402,8 @@ local servers = {
   -- rust_analyzer = {},
   -- tsserver = {},
 
-  sumneko_lua = {
+  -- sumneko_lua = {
+  lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
       telemetry = { enable = false },
