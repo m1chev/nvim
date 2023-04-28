@@ -57,6 +57,9 @@ vim.keymap.set('n', '<C-h>', '<C-W>h')
 -- please delete this line
 vim.keymap.set("n", "<C-w>", "<cmd>silent !tmux neww tmux-sessionizer.sh<CR>")
 
+-- vim.keymap.set('n', '<C-x>', 'vim.cmd.bd')
+vim.keymap.set('n', '<C-d>', '<cmd>bd<CR>')
+
 -- comment line gcc
 -- <space>ca - [C]ode [A]ction
 -- vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
